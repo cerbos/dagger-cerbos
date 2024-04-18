@@ -1,18 +1,18 @@
-# Cerbos Dagger Module
+# Dagger Cerbos Module
 
 A [Dagger](https://dagger.io) module for using Cerbos in CI environments. This module contains a `Compile` Dagger function for [compiling and testing Cerbos policies](https://docs.cerbos.dev/cerbos/latest/policies/compile) and a `Server` service for starting a Cerbos server.
 
 ```sh
 # View usage information
-dagger -m github.com/cerbos/cerbos-dagger/cerbos@latest call compile --help
-dagger -m github.com/cerbos/cerbos-dagger/cerbos@latest call server --help
+dagger -m github.com/cerbos/dagger-cerbos@latest call compile --help
+dagger -m github.com/cerbos/dagger-cerbos@latest call server --help
 
 # Compile and run tests on a Cerbos policy repository
-dagger -m github.com/cerbos/cerbos-dagger/cerbos@latest call compile --policy-dir=./cerbos
+dagger -m github.com/cerbos/dagger-cerbos@latest call compile --policy-dir=./cerbos
 
 # Start a Cerbos server with the default disk driver
-dagger -m github.com/cerbos/cerbos-dagger/cerbos@latest call server --policy-dir=./cerbos up
+dagger -m github.com/cerbos/dagger-cerbos@latest call server --policy-dir=./cerbos up
 
 # Start a Cerbos server instance configured to use an in-memory SQLite policy repository
-dagger -m github.com/cerbos/cerbos-dagger/cerbos@latest call server --config=storage.driver=sqlite3,storage.sqlite3.dsn=:memory:,server.adminAPI.enabled=true up
+dagger -m github.com/cerbos/dagger-cerbos@latest call server --config=storage.driver=sqlite3,storage.sqlite3.dsn=:memory:,server.adminAPI.enabled=true up
 ```
